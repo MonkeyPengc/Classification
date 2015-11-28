@@ -141,7 +141,7 @@ class Bayes_Model(object):
                     tp_prediction += 1
                     true_prediction += 1
                 
-                elif prob_p < prob_n and cls == '-1':   # true negative prediction
+                elif prob_p < prob_n and cls_label == '-1':   # true negative prediction
                     record = cls_label + " " + str(line[2:].strip()) + " -> true"   # data in LIBSVM format
                     prediction_rec.append(record)
                     tn_prediction += 1
